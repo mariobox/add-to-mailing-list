@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= "Thank You!"
+    meta(name="viewport", content="width=device-width initial-scale=1")
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css", crossorigin="anonymous")
+  body
+    nav.navbar.navbar-inverse
+      div.container
+        div.navbar-header
+          a(href='/').navbar-brand Home
+    div.container
+      h1= "Thanks for joining!"
+      table.table
+        caption Your name has been added to our mailing list. Full member list below:
+          thread
+            tr
+              th First Name
+              th Last Name
+              th Twitter Handle
+          tbody
+            each member in memberList
+              tr
+                td= member.FirstName
+                td= member.LastName
+                td= member.TwitterHandle
+      a(href='/') Add another name

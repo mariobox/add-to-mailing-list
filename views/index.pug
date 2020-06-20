@@ -1,0 +1,26 @@
+doctype html
+html
+head
+  title= "Add Your Name"
+  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css", crossorigin="anonymous")
+body
+  nav.navbar.navbar-inverse
+    div.container
+      div.navbar-header
+        a(href='/').navbar-brand Home
+  div.container
+    h1= "Join the mailing list!"
+    p= "Add your information below. This is just a test of a back-end Node/Express application working together with a basic CSV database."
+    p(style="color:red") !{message}
+    form(action="/success", method="GET")
+      div.form-group
+        h4 First Name:
+        input(type="text", name="first_name", placeholder="")
+        p
+        h4 Last Name:
+        input(type="text", name="last_name", placeholder="")
+        p
+        h4 Twitter Handle (please include the @):
+        input(type="text", name="twitter_handle", placeholder="@yourhandle")
+        p
+        input(type="submit")
